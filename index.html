@@ -1063,7 +1063,7 @@ meta:
 			<p>In many cases, you can use a GIF fallback for IE6, in place of a PNG24. This is especially true if any sprites need to be done in PNG24. All pngfixes are very slow and expensive, so it's best to avoid using them.</p>
 		</li>
 		<li><p><strong>PNG8.</strong> - A surprising diversity of color can be captured inside 256 colors, so it's worth trying PNG before heading JPG. PNG also is a lot more compressible than GIF (using tools like pngcrush and pngquant). This format allows graded opacity in nearly all browsers, but in IE6, those semi-opaque pixels are just shown 100% transparent. In many cases this is sufficient. It also does not require a pngfix script to be run, so it's optimized for speed.</p>
-			<p>Photoshop cannot output these semi-opaque files correctly but Fireworks can. More detail here: <a href="http://www.sitepoint.com/blogs/2007/09/18/png8-the-clear-winner/">http://www.sitepoint.com/blogs/2007/09/18/png8-the-clear-winner/</a></p>
+			<p>Photoshop cannot output these semi-opaque files correctly but Fireworks can. More detail here: <a href="http://www.sitepoint.com/png8-the-clear-winner/">http://www.sitepoint.com/png8-the-clear-winner/</a></p>
 		</li>
 		<li><p><strong>Transparent GIF 89a.</strong> - GIF 89a offers the flexibility of transparency and wide browser support, but the constraints of no graded opacity nor a color depth above 256. In our experience, color depths of 64 still provide very good quality thumbnails, and keep the file size comparably very small.</p>
 			<p>All low-color count imagery such as icons or thematic graphics should be done in PNG8, as it's the most size-efficient of these four. PNG8 is our primary recommendation for most site graphics.</p>
@@ -1502,7 +1502,8 @@ meta:
 	<h2>Appendix B: Tools</h2>
 	
 	<ul>
-		<li><a href="http://www.browsercam.com/">BrowserCam</a> - Displays how a web site will appear in most browsers (including versions) and operating systems.</li>
+		<li><a href="http://browsershots.org/">Browsershots</a> makes screenshots of your web design in different operating systems and browsers</li>
+		<li><a href="https://browserling.com/">Browserling</a> is an interactive cross-browser testing site. Fully interactive sessions, not static screenshots.</li>
 		<li>Accessibility - <a href="http://www.w3.org/WAI/ER/existingtools.html">Evaluation, Repair, and Transformation Tools for Web Content Accessibility</a> - lists validation tools for validating, testing and fixing web content to make it more accessible.</li>
 	</ul>
 	
@@ -1695,18 +1696,6 @@ meta:
     <p>From the site: <a href="http://www.fiddler2.com/fiddler2/">&quot;Fiddler </a>is a Web Debugging Proxy which logs all HTTP(S)   		traffic between your computer and the Internet. Fiddler allows you to   		inspect traffic, set breakpoints, and &quot;fiddle&quot; with incoming or outgoing data.    		Fiddler includes a powerful event-based   		scripting subsystem, and can be extended using any .NET language.&quot;</p>
     <h3>Speedlimit</h3>
 <p><a href="http://mschrag.github.com/">Speedlimit</a> is a Leopard (works in snow leopard) preference pane for limiting your network bandwidth to one of a couple different speeds—768k DSL, Edge, 3G, and Dialup. Good for testing your lowest supported speeds or when you want to know how your app will function in  real world speeds.</p>
-	<!--
-	<h3>Javascript Libraries</h3>
-	<ul>
-		<li><a href="http://mootools.net/">Mootools</a> - small footprint, known for its visual effects</li>
-		<li><a href="http://prototypejs.org/">Prototype</a> - large footprint, huge developer community, integrated into Rails</li>
-		<li><a href="http://script.aculo.us/">Scriptaculous</a> - sits on top of prototype, big, slider, draggables</li>
-		<li><a href="http://extjs.org/">Ext</a> - sits on YUI, jQuery, and Prototype. More dojo like functionality</li>
-		<li><a href="http://dojotoolkit.org/">Dojo</a> - large, for big applications</li>
-		<li><a href="http://developer.yahoo.com/yui/">YUI</a> - well documented, best practices javascript coding</li>
-		<li><a href="http://jquery.com/">jquery</a> - chainable and performance optimized</li>
-	</ul>
-	-->	
 
 	<h3>Tutorials &amp; Tools:</h3>
 
@@ -1732,7 +1721,6 @@ meta:
 	<ul>
 		<li><a href="http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-262.pdf">ECMA 262 5th Edition December 2009</a></li>
 		<li><a href="http://dev.opera.com/articles/view/1-introduction-to-the-web-standards-cur/#toc">Opera's The Web Standards Curriculum</a> - basic articles about building with web standards.</li>
-		<li><a href="http://code.google.com/p/doctype/wiki/Welcome?tm=6">Google Doctype</a> - more advanced tutorials on javascript and CSS.</li>
 		<li><a href="http://nettuts.com/html-css-techniques/10-principles-of-the-css-masters/">10 Principles of the CSS Masters</a> - all of this is smart advice.</li>
 		<li><a href="http://www.google.com">Google</a> - when in doubt, google it.</li>
 		<li><a href="http://lmgtfy.com/?q=front-end+development+coding+standards&l=1">Too lazy?</a> - let me google that for you then...</li>
