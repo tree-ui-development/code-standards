@@ -11,7 +11,7 @@ meta:
 
 <h2>Overview</h2>
 
-<p>This document contains guidelines for web applications built by the Creative Technology (front end engineering) practice of Isobar US. It is to be readily available to anyone who wishes to check the iterative progress of our best practices. If you have any feedback, please leave a comment on the <a href="http://na.isobar.com/2010/our-front-end-development-best-practices/#comments">announcement blog post</a>.</p>
+<p>This document contains guidelines for web applications built by the Creative Technology (front end engineering) practice of Roundarch Isobar. It is to be readily available to anyone who wishes to check the iterative progress of our best practices. If you have any feedback, please leave a comment on the <a href="http://na.isobar.com/2010/our-front-end-development-best-practices/#comments">announcement blog post</a>.</p>
 
 <p>This document's primary motivation is two- fold: <tt>1)</tt> code consistency and <tt>2)</tt> best practices. By maintaining consistency in coding styles and conventions, we can ease the burden of legacy code maintenance, and mitigate risk of breakage in the future. By adhering to best practices, we ensure optimized page loading, performance and maintainable code.</p>
 
@@ -65,7 +65,7 @@ meta:
 	
 	<p>We will use the HTML5 Doctype and HTML5 features when appropriate.</p>
 	
-	<p>We will test our markup against the <a href="http://validator.w3.org/">W3C validator</a>, to ensure that the markup is well formed. 100% valid code is not a goal, but validation certainly helps to write more maintainable sites as well as debugging code. <b>Isobar does not guarantee code is 100% valid, but instead assures the cross-browser experience is fairly consistent</b>.</p>
+	<p>We will test our markup against the <a href="http://validator.w3.org/">W3C validator</a>, to ensure that the markup is well formed. 100% valid code is not a goal, but validation certainly helps to write more maintainable sites as well as debugging code. <b>Roundarch Isobar does not guarantee code is 100% valid, but instead assures the cross-browser experience is fairly consistent</b>.</p>
 
 	<h3 id="h5bp">Template</h3>
 	
@@ -970,11 +970,11 @@ meta:
 
 	<p><a href="http://www.section508.gov/index.cfm?FuseAction=Content&ID=12#Web">Section 508 Standards for intranet and internet information and applications</a>.</p>
 	
-	<p class="indent">&mdash; Interfaces developed by Isobar should meet Section 508 standards.</p>
+	<p class="indent">&mdash; Interfaces developed by Roundarch Isobar should meet Section 508 standards.</p>
 
 	<p><a href="http://www.w3.org/TR/WCAG10/full-checklist.html">W3C checklist of checkpoints for accessibility</a>.</p>
 	
-	<p class="indent">&mdash; Interfaces developed by Isobar should meet Priority 1 guidelines.</p>
+	<p class="indent">&mdash; Interfaces developed by Roundarch Isobar should meet Priority 1 guidelines.</p>
 	
 	<p class="indent">&mdash; <a href="http://www.w3.org/TR/1999/WAI-WEBCONTENT-19990505/#Guidelines">The WCAG 1.0 Guidelines</a>.</p>
 
@@ -1059,7 +1059,7 @@ meta:
 	<ol>
 		<li><p><strong>JPEG.</strong> - This will cover all photography-based images, such as homepage and category page promo images, or anything with a very high color count.</p></li>
 		<li>
-			<p><strong>PNG24.</strong> This format, easily accessible in Photoshop, outputs high-color count imagery and fully supports graded opacity by pixel. Relatively, it's quite a heavy format as far as kilobyte weight. It is the only format that IE6 needs to execute a pngfix on. In that case, Isobar recommends the <a href="http://www.dillerdesign.com/experiment/DD_belatedPNG/">DD_belatedPNG script</a> (A pngfix fixes the issue where PNG24's appear to have a gray or light-blue background in IE6. They are not always compatible with background-position).</p>
+			<p><strong>PNG24.</strong> This format, easily accessible in Photoshop, outputs high-color count imagery and fully supports graded opacity by pixel. Relatively, it's quite a heavy format as far as kilobyte weight. It is the only format that IE6 needs to execute a pngfix on. In that case, Roundarch Isobar recommends the <a href="http://www.dillerdesign.com/experiment/DD_belatedPNG/">DD_belatedPNG script</a> (A pngfix fixes the issue where PNG24's appear to have a gray or light-blue background in IE6. They are not always compatible with background-position).</p>
 			<p>In many cases, you can use a GIF fallback for IE6, in place of a PNG24. This is especially true if any sprites need to be done in PNG24. All pngfixes are very slow and expensive, so it's best to avoid using them.</p>
 		</li>
 		<li><p><strong>PNG8.</strong> - A surprising diversity of color can be captured inside 256 colors, so it's worth trying PNG before heading JPG. PNG also is a lot more compressible than GIF (using tools like pngcrush and pngquant). This format allows graded opacity in nearly all browsers, but in IE6, those semi-opaque pixels are just shown 100% transparent. In many cases this is sufficient. It also does not require a pngfix script to be run, so it's optimized for speed.</p>
@@ -1217,7 +1217,7 @@ meta:
 		
 		<h1>Browser Testing and Support</h1>
 		
-		<p>Today's audience can choose from quite a large pool of web browsers, each providing a slightly (or dramatically) different experience. As developers, it is our responsibility to choose just how the web pages we build are displayed to those users. This section describes how we, at Isobar, make some of these key decisions.</p>
+		<p>Today's audience can choose from quite a large pool of web browsers, each providing a slightly (or dramatically) different experience. As developers, it is our responsibility to choose just how the web pages we build are displayed to those users. This section describes how we, at Roundarch Isobar, make some of these key decisions.</p>
 	</div>
 	
 
@@ -1227,14 +1227,14 @@ meta:
 		<img src="img/browsers1.jpg" alt="Browsers" />
 	</figure>
 	
-	<p><strong>Isobar supports any browser with an A-Grade in <a href="http://developer.yahoo.com/yui/articles/gbs/">Yahoo's Graded Browser Support</a>, with the exception of Opera. There may be exceptions to this, given regional markets and their particular metrics</strong>.</p>
+	<p><strong>Roundarch Isobar supports any browser with an A-Grade in <a href="http://developer.yahoo.com/yui/articles/gbs/">Yahoo's Graded Browser Support</a>, with the exception of Opera. There may be exceptions to this, given regional markets and their particular metrics</strong>.</p>
 
 	<p>We will strive to support any other mission critical browsers mandated by the client (IE 5.5, Opera, Konqueror, Safari 3 on PC, etc), though we cannot guarantee all functionality is possible.</p>
 	
 	
 	<h3>How we test</h3>
 	
-	<p>Comprehensive browser testing is a must on every Isobar web project. Considerable effort must be made to test across browsers and platforms to ensure a quality and consistent user experience. Setting up a testing environment can be a challenge but can be well worth it.</p>
+	<p>Comprehensive browser testing is a must on every Roundarch Isobar web project. Considerable effort must be made to test across browsers and platforms to ensure a quality and consistent user experience. Setting up a testing environment can be a challenge but can be well worth it.</p>
 
 	<h4>On Microsoft Windows</h4>
 	
@@ -1282,7 +1282,7 @@ meta:
 	<p><a href="#vhds">The Microsoft VHD's</a> can be opened or converted on most of these options, therefore enabling the same degree of testing prowess that Windows users have available to them. Though since you can also test on the Mac simultaneously, some might argue you have more flexibility...</p>
 	
 	<ul>
-		<li><a href="http://www.parallels.com/products/desktop/">Parallels</a> - Parallels is available and may already be installed by the Isobar IT department on your Mac.</li>
+		<li><a href="http://www.parallels.com/products/desktop/">Parallels</a> - Parallels is available and may already be installed by the Roundarch Isobar IT department on your Mac.</li>
 		<li><a href="http://www.vmware.com/products/fusion/overview.html">VMWare Fusion</a> - VMWare Fusion offers the same level of Windows virtualization through their Fusion product.</li>
 	</ul>
 
@@ -1765,21 +1765,6 @@ meta:
 	
 </aside>
 	
-<aside id="team" role="comlimentary">
-
-	<h2>Questions?</h2>
-	<em>Tweet at the Isobar iDev team:</em>
-	
-	<ul>
-		<li>Rob Larsen (<a href="http://twitter.com/#%21/robreact">@robreact</a>)</li>
-		<li>Adam McIntyre (<a href="http://twitter.com/#%21/_ajm">@_ajm</a>)</li>
-		<li>Rob Cherny (<a href="http://twitter.com/#%21/rcherny">@rcherny</a>)</li>
-		<li>Jared Williams (<a href="http://twitter.com/#%21/jaredwilli">@jaredwilli</a>)</li>
-		<li>Annette Arabasz (<a href="http://twitter.com/#%21/Annettish">@annettish</a>)</li>
-	</ul>
-
-</aside>
-
 <aside id="revisions" role="comlimentary">
 
 	<h1>Revision History</h1>

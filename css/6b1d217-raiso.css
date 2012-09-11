@@ -302,7 +302,7 @@ header h1 a{
 }
 
 header #social{
-	background:rgba(64,64,64,0.9);
+	/* background:rgba(64,64,64,0.9); */
 	float:right;
 	margin-bottom:0;
 	padding:7px;
@@ -356,7 +356,7 @@ header #social #linkback{
 	font-style:italic;
 	text-decoration:none;
 	text-align:center;
-	width:60px;
+	width:110px;
 	height:15px;
 	background:0
 }
@@ -421,7 +421,8 @@ header #social #linkback:hover{
 	-o-border-radius:100px;
 	height:100px;
 	width:100px;
-	background:#f30;
+	/* background:#f30; */
+	background:#F74902;
 	float:left;
 	display:inline;
 	margin:0 20px 20px 0
@@ -489,7 +490,8 @@ abbr{
 }
 
 a{
-	color:#f30
+	/* color:#f30 */
+	color: #F74902;
 }
 
 a:hover{
@@ -505,7 +507,8 @@ p.indent{
 }
 
 h1,h2,h3,h4,h5,h6{
-	color:#f30;
+	/* color:#f30; */
+	color:#F74902;
 	position:relative;
 	margin-top:20px
 }
@@ -668,7 +671,8 @@ a[href^="https://wiki"],a[href^="http://repo"],a[href^="https://fusion"]{
 
 #side .toc-title{
 	border-bottom:1px solid gainsboro;
-	border-top:10px solid #f30;
+	/* border-top:10px solid #f30; */
+	border-top: 10px solid #F74902;
 	font-family:'Calibri','AlexandriaBold';
 	font-size:30px;
 	padding:15px 0 6px 20px;
@@ -932,7 +936,8 @@ html body div.syntaxhighlighter *{
 	}
 
 	h1,h2,h3{
-		color:#f30;
+		/* color:#f30; */
+		color:#F74902;
 		position:relative;
 		margin-top:20px;
 		font-weight:200
@@ -950,7 +955,8 @@ html body div.syntaxhighlighter *{
 
 	a,a:visited{
 		text-decoration:none;
-		color:#f30
+		/* color:#f30 */
+		color:#F74902
 	}
 
 	body .fork,#side,header #social,canvas,.anchor_link,.backAnchor{
