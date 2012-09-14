@@ -31,9 +31,33 @@ module.exports = function(grunt) {
                 })()),
                dest: 'index.html'
             }
-        }
+        }/*,
+        template: {
+            dist : {
+                src : '_test/file.hogan',
+                dest: '_test/out/file.html',
+                variables : {
+                    content : 'testing output that goes here!!'
+                }
+            }
+        }*/
+        /*,
+        replace : {
+            dist : {
+                src : ['_test/test.html'],
+                dest : '_test/out/',
+                variables : {
+                    testing : 'can this be a string?'
+                }
+            }
+        }*/
     });
+
+    // grunt.loadNpmTasks('grunt-replace');
+    grunt.loadNpmTasks('grunt-templater');
 
     // create default task
     grunt.registerTask('default', 'concat');
+    // grunt.registerTask('replaceTest', 'replace');
+    //grunt.registerTask('templateRunner', 'template');
 };
