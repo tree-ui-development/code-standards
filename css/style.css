@@ -180,7 +180,6 @@ button { width: auto; overflow: visible; }
 /**
  * You might tweak these..
  */
-
 /* New bulletproof @font-face by fontspring:
    http://www.fontspring.com/blog/further-hardening-of-the-bulletproof-syntax/ */
 @font-face {
@@ -228,11 +227,10 @@ body {
 	min-width: 960px;
 }
  
- /**
+/**
  * Beginning of page styling separate from the base styles of
  * the html5 boilerplate
  */
- 
 /*
 	#036 - dark blue
 	#06c - blue
@@ -289,19 +287,20 @@ header h1 a {
     height: 70px;
     position: absolute;
     text-indent: -9999em;
-    width: 226px;
+	width:365px
 }
+
 header h1 a { 
-    background: url("../img/isobar.png") no-repeat 0 0;
+	background:url("../img/logo-roundarchisobar.png") no-repeat 0 0;
     position: absolute;
 	text-indent: -9999em;
     height: 70px;
-    width: 226px;
-	display: block;
+	width:365px;
+	display:block;
 }
 
 header #social {
-    background: rgba(64, 64, 64, 0.9);
+	/* background:rgba(64,64,64,0.9); */
     float: right;
     margin-bottom: 0;
     padding: 7px;
@@ -340,7 +339,7 @@ header #social #linkback {
 	font-style: italic; 
 	text-decoration: none; 
 	text-align: center; 
-	width: 60px; 
+	width:110px;
 	height: 15px; 
 	background: none;
 }
@@ -404,7 +403,8 @@ header #social #linkback:hover { color: #dcdcdc; }
 	-o-border-radius: 100px;
 	height: 100px;
 	width: 100px;
-	background: #f30;
+	/* background: #f30; */
+	background:#F74902;
 	float: left;
 	display: inline;
 	margin: 0 20px 20px 0;
@@ -484,9 +484,10 @@ p.indent { margin: -10px 0 5px 0; }
 
 /* Headers (h1, h2, etc) have no default font-size or margin;define those yourself */
 h1, h2, h3, h4, h5, h6 { 
-	color: #f30;
+	/* color:#f30; */
+	color:#F74902;
 	position: relative;
-	margin-top: 20px;
+	margin-top:20px
 }
 
 h3, h4, h5, h6 { font-weight: normal; }
@@ -634,19 +635,22 @@ dd { margin-bottom: 10px; }
 /* Thanks for the icon! http://p.yusukekamiyamane.com/ */
 a[href^="https://wiki"], a[href^="http://repo"], a[href^="https://fusion"] { background:  url(data:image/png,%89PNG%0D%0A%1A%0A%00%00%00%0DIHDR%00%00%00%0A%00%00%00%0A%08%06%00%00%00%8D2%CF%BD%00%00%00%A2IDAT%18%D3%7D%8C%A1%0E%C20%18%84%EF-x%0A%DEaOS%3B%89%22%A9Ba%90%0D%8E%A0%A6%96L%A1*%B0%0Bn%A0%96%60%B08%F4%F1_%C7%B2%84%26m%F2%25%97%FF%BE%1EHB%84%10*%83%7FTs%8F9x%EFiD%BF%3Cef%A2s%8E%867%F0Cy%11%C7%06%F1%D9%AD%D8l%40%CB%7C%0FuBY7ur%F08%EB%C3XD%0E%F4%EB%B2%03o%C7i%91%9F6%A1%AC%9B%3A9%B8%1E%AC%7C%D5E%E4%E4%8B%F7u%22%5Bl%B7V%F6e%E4h1v%1E%8C%7B%B0%0F%E0p%9AP%D6M%9D%9C%2F%FD%7C%0A%E2k%80%16%89%00%00%00%00IEND%AEB%60%82) no-repeat 0 3px; padding-left: 13px; }
 
+dd{
+	margin-bottom:10px
+}
 
 /* Table of Contents
 ----------------------------------------------------------------------------------------------------*/
 
 #side .toc-title {
 	border-bottom: 1px solid gainsboro;
-/*  border-top: 50px solid rgba(64, 64, 64, .9); */
-	border-top: 10px solid #FF3300;
+	/* border-top:10px solid #f30; */
+	border-top: 10px solid #F74902;
 	font-family: 'Calibri','AlexandriaBold';
 	font-size: 30px;
 	padding: 15px 0 6px 20px;
 	position: fixed;
-	top: 30px; /* -20px; */
+	top:30px;
 	width: 300px;
 	z-index: 0;
 }
@@ -690,7 +694,6 @@ a[href^="https://wiki"], a[href^="http://repo"], a[href^="https://fusion"] { bac
 	list-style: none;
 	font-size: 16px;
     width: 320px;
-/*	display: none; */
 }
 #toc .h2 a { padding: 0 0 0 30px; }
 
@@ -820,8 +823,6 @@ html body div.syntaxhighlighter * {
 /* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
 .clearfix { zoom: 1; }
 
-
-
 /**
  * Media queries for responsive design.
  *
@@ -843,7 +844,6 @@ html body div.syntaxhighlighter * {
   /* html { -webkit-text-size-adjust:none;-ms-text-size-adjust:none;} */
 }
 
-
 /**
  * Print styles.
  *
@@ -863,29 +863,48 @@ html body div.syntaxhighlighter * {
   p, h2, h3 { orphans: 3; widows: 3; }
   h2, h3{ page-break-after: avoid; }
 
+
 body { width: 80%; font-family: Calibri, Arial, Helvetica, sans-serif; }
 header { width: 100%; }
 
-header #logo { background: url("../img/isobar.png") no-repeat 0 0; }
+	header #logo{
+		background:url("../img/logo-roundarchisobar.png") no-repeat 0 0
+	}
 
 h1, h2, h3, h4, h5, h6 { }
 
 h1, h2, h3 {
-	color: #f30;
+		/* color:#f30; */
+		color:#F74902;
 	position: relative;
 	margin-top: 20px;
-	font-weight: 200;
+		font-weight:200
 }
 
-h1 { padding: 0; margin: 0; color: rgb(0, 5, 10); }
-header h1 a { font-size: 48px; }
+	h1{
+		padding:0;
+		margin:0;
+		color:#00050a
+	}
  
-a, a:visited { text-decoration: none; color: #FF3300; }
+	header h1 a{
+		font-size:48px
+	}
 
-body .fork, #side, header #social, canvas, .anchor_link, .backAnchor { visibility: hidden; }
+	a,a:visited{
+		text-decoration:none;
+		/* color:#f30 */
+		color:#F74902
+	}
 
+	body .fork,#side,header #social,canvas,.anchor_link,.backAnchor{
+		visibility:hidden
+	}
 
-.syntaxhighlighter { background: #ccc; }
+	.syntaxhighlighter{
+		background:#ccc
+	}
+
 }
 
 
