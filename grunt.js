@@ -54,7 +54,7 @@ module.exports = function(grunt) {
     });
 
     // grunt.loadNpmTasks('grunt-replace');
-    grunt.loadNpmTasks('grunt-templater');
+    // grunt.loadNpmTasks('grunt-templater');
 
     // create default task
     grunt.registerTask('default', 'concat');
