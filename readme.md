@@ -10,7 +10,7 @@ It is important that anyone who follows these standards note that as of mid-Sept
 
 The Roundarch Isobar Front End Code Standards & Guidelines document is a living document that has many changes on the way. We're also going to be making some subtle changes to the Github repo structure so please keep your eyes open.
 
-### Building this Page ###
+### Building this Page (GH-Pages branch) ###
 
 > *last update: September 20, 2012*
 
