@@ -4,7 +4,7 @@ This repo contains the published Roundarch Isobar Front End Coding Standard's an
 
 ## Please Update Your Bookmarks
 
-It is important that anyone who follows these standards note that as of mid-September 2012, the [old link](http://na.isobar.com/standards) has been retired in favor of these new Github-hosted version of the documents. 
+It is important that anyone who follows these standards note that as of mid-September 2012, the [old link](http://na.isobar.com/standards) has been retired in favor of the new Github-hosted version of the documents. 
 
 > **New Link:** [Roundarch Isobar Front End Code Standards & Guidelines](http://isobar-idev.github.com/code-standards)
 
