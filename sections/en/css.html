@@ -9,7 +9,7 @@
 		
 		<p>The second component of a web page is the presentation information contained in the Cascading Style Sheet (<abbr title="Cascading Style Sheets">CSS</abbr>.) Web browsers successful implementation of CSS has given a whole generation of web authors site-wide control over the look and feel of their web sites.</p>
 		
-		<p>Just as the information on a web page is semantically described in the <a href="#markup">HTML Markup</a>, CSS describes all presentation aspects of the page via a description of it's visual properties. CSS is powerful in that these properties are mixed and matched via identifiers to control the page's layout and visual characteristics through the layering of style rules (the "cascade").</p>
+		<p>Just as the information on a web page is semantically described in the <a href="#markup">HTML Markup</a>, CSS describes all presentation aspects of the page via a description of its visual properties. CSS is powerful in that these properties are mixed and matched via identifiers to control the page's layout and visual characteristics through the layering of style rules (the "cascade").</p>
 	</div>
 
 	<h3>General Coding Principles</h3>
@@ -31,7 +31,7 @@
 			</li>
 
 		<li>Don't include styles inline in the document, either in a style tag or on the elements. It's harder to track down style rules.</li>	
-		<li>Use a reset CSS file (like the one present in H5BP or the <a href="http://meyerweb.com/eric/tools/css/reset/">Eric Meyers reset</a>) to zero our cross-browser weirdness.</li>
+		<li>Use <a href="http://necolas.github.com/normalize.css/">normalize.css</a> to make rendering more consistent across browsers.</li>
 		<li>Use a font-normalization file like <a href="http://developer.yahoo.com/yui/fonts/">YUI fonts.css</a></li>	
 		<li>Elements that occur only once inside a document should use IDs, otherwise, use classes.</li>
 		<li>Understand <a href="http://www.stuffandnonsense.co.uk/archives/css_specificity_wars.html">cascading and selector specificity</a> so you can write very terse and effective code.</li>
@@ -56,6 +56,7 @@
 	
 	<p>At minimum, format CSS with selectors on one line and each property on its own line. The declarations are indented. </p>
 	<p>As an enhancement to that style, related or child styles and additional 2 or 4 spaces. That allows for hierarchical scanning and organization and makes (for some people) an easier-to-read style sheet.</p>
+	<p>Also, if you specify multiple selectors, it's a good idea to start each on new line. This prevents lines from growing long and improves readability as well as version control workflow.</p>
     <textarea class="brush:css">
     .post-list li a{
 		color:#A8A8A8;
@@ -64,7 +65,8 @@
         	color:#000;
         	text-decoration:none;
      	}
-     	.post-list li .author a, .post-list li .author a:hover{
+     	.post-list li .author a, 
+     	.post-list li .author a:hover{
         	 color:#F30;
        		 text-transform:uppercase;
      	}
@@ -113,7 +115,7 @@
 	
 	<p>IDs have a higher specificity than attribute selectors do, and class selectors have higher specificity than any number of element selectors. Always try to use IDs to increase the specificity. There are times when we may try to apply a CSS rule to an element and it does not work no matter what we try. This is likely because the specificity of the selector used is lower than another one and the properties of the higher one are taking precedence over those you want to apply. This is more common in working with larger more complex stylesheets. It isn't a big issue with smaller projects usually.</p>
 	
-	<h5>Calculating specifity</h5>
+	<h5>Calculating specificity</h5>
 	
 	<p>When working with a large and complex stylesheet it helps to know how to calculate the value of a selector's specificity, to save you time and to make your selectors more efficient.</p>
 	
@@ -213,6 +215,18 @@
 			</ul>
 		</li>
 	</ul>
+<h3>Color Management</h3>
+    <ul>
+        <li>Verify that all members on your team have consistent color management settings.</li>
+           <ul>
+               <li>Any given two monitors most likely display the colors differently, but sRGB color profile must be your default.</li>
+               <li>When you open files in Photoshop, pay attention to Color Profile warnings and notify team members when Photoshop is suggesting to convert an image to a different profile.</li> 
+			</ul>
+        <li>Never embed a color profile in your images.
+            <ul>
+				<li>When you Save for Web and Devices from Photoshop, be sure to uncheck &quot;Embed Color Profile.&quot;</li>
+			</ul> </li>
+    </ul>
 
 	<hr />
 	
@@ -522,4 +536,13 @@
 		<li><a href="http://developer.apple.com/fonts/TTRefMan/">Apple True Type Reference</a> </li>
 	</ul>
 
+	<h3>Use CSS3</h3>
+	
+	<p>You can do a lot of new things with the added features in the CSS3 spec, many of which are not yet fully supported by all the major browsers. That doesn't 
+	mean they can't be used today. For the things that aren't supported there are fallback libraries or other 'polyfills' which you can use to fill in the holes where
+	browsers may be lacking some support of a new feature.</p>
+	
+	<p>There are also browser specific properties or prefixes that can be used to style things too. We recommend using <a href="http://prefixr.com">Prefixr.com</a> to 
+	make sure you include all the different prefixed browser properties for the sake of cross-browser support.</p>
+	
 </section>
