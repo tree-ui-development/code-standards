@@ -10,7 +10,7 @@
 	darkblue: 	#036
 	blue: 		#06c
 	greenish:	#066
-	darkorange: #f30 
+	darkorange: #68A015 
 
  * --------------------------
  */
@@ -211,7 +211,7 @@ body {
 	#036 - dark blue
 	#06c - blue
 	#066 - greenish
-	#F30 - orange
+	#68A015 - orange
 	#444 - dark gray
 	#dcdcdc - light gray
 	
@@ -267,7 +267,7 @@ header h1 a {
 }
 
 header h1 a { 
-	background:url("../img/logo-roundarchisobar.png") no-repeat 0 0;
+	background:url("../img/logo-lendingtree.png") no-repeat 0 0;
     position: absolute;
 	text-indent: -9999em;
     height: 70px;
@@ -379,8 +379,8 @@ header #social #linkback:hover { color: #dcdcdc; }
 	-o-border-radius: 100px;
 	height: 100px;
 	width: 100px;
-	/* background: #f30; */
-	background:#F74902;
+	/* background: #68A015; */
+	background:#68A015;
 	float: left;
 	display: inline;
 	margin: 0 20px 20px 0;
@@ -444,7 +444,7 @@ p, ol, ul {
 
 abbr { border-bottom: 1px dotted; }
 
-a { color: #f30; /* #09f */ }
+a { color: #68A015; /* #09f */ }
 
 a:hover { color: #333; }
 
@@ -460,8 +460,8 @@ p.indent { margin: -10px 0 5px 0; }
 
 /* Headers (h1, h2, etc) have no default font-size or margin;define those yourself */
 h1, h2, h3, h4, h5, h6 { 
-	/* color:#f30; */
-	color:#F74902;
+	/* color:#68A015; */
+	color:#68A015;
 	position: relative;
 	margin-top:20px
 }
@@ -620,8 +620,8 @@ dd{
 
 #side .toc-title {
 	border-bottom: 1px solid gainsboro;
-	/* border-top:10px solid #f30; */
-	border-top: 10px solid #F74902;
+	/* border-top:10px solid #68A015; */
+	border-top: 10px solid #68A015;
 	font-family: 'Calibri','AlexandriaBold';
 	font-size: 30px;
 	padding: 15px 0 6px 20px;
@@ -844,14 +844,14 @@ body { width: 80%; font-family: Calibri, Arial, Helvetica, sans-serif; }
 header { width: 100%; }
 
 	header #logo{
-		background:url("../img/logo-roundarchisobar.png") no-repeat 0 0
+		background:url("../img/logo-lendingtree.png") no-repeat 0 0
 	}
 
 h1, h2, h3, h4, h5, h6 { }
 
 h1, h2, h3 {
-		/* color:#f30; */
-		color:#F74902;
+		/* color:#68A015; */
+		color:#68A015;
 	position: relative;
 	margin-top: 20px;
 		font-weight:200
@@ -869,8 +869,8 @@ h1, h2, h3 {
 
 	a,a:visited{
 		text-decoration:none;
-		/* color:#f30 */
-		color:#F74902
+		/* color:#68A015 */
+		color:#68A015
 	}
 
 	body .fork,#side,header #social,canvas,.anchor_link,.backAnchor{
