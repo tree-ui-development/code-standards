@@ -13,7 +13,7 @@ var ISOBAR = {
 		toc : function(){
 			var main = document.getElementById('main'),
 				toc = document.getElementById('toc'),
-				hx = $('section h1, section h2, section h3, section h4, section h5'),
+				hx = $('section h1, section h2, section h3, section h4, section h5, #revisions h1'),
 				frag = document.createDocumentFragment(),
 				hx_len = hx.length,
 				anchor, tag, the_text;
