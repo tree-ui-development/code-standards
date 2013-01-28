@@ -7,6 +7,7 @@ meta:
 ---
 
 <!-- #### GENERAL SECTION #### -->
+
 <h1>Front-end Code Standards &amp; Best Practices</h1>
 
 <h2>Overview</h2>
@@ -27,7 +28,7 @@ meta:
 	
 	<ol>
 		<li>Separation of presentation, content, and behavior.</li>
-		<li><a href="http://www.bbc.co.uk/guidelines/futuremedia/technical/semantic_markup.shtml">Markup should be well-formed, semantically correct</a> and <a href="#validation">generally valid</a>.</li>
+		<li><a href="http://www.bbc.co.uk/guidelines/futuremedia/technical/semantic_markup.shtml">Markup should be well-formed, semantically correct</a> and <a href="#_appendix_a_validators">generally valid</a>.</li>
 		<li><a href="http://icant.co.uk/articles/pragmatic-progressive-enhancement/">Javascript should progressively enhance the experience</a>.</li>
 	</ol>
 	
@@ -61,7 +62,7 @@ meta:
 	
 	<h2 id="html5">HTML5</h2>
 	
-	<p><a href="http://www.ibm.com/developerworks/library/wa-webstandards/index.html">HTML5</a> is a new version of HTML and XHTML. The <a href="http://www.w3.org/TR/html5/">HTML5 draft</a> specification defines a single language that can be written in HTML and XML. It attempts to solve issues found in previous iterations of HTML and addresses the needs of <em>web Applications</em>, an area previously not adequately covered by HTML. (<a href="http://html5.org/">source</a>).</p>
+	<p><a href="http://www.ibm.com/developerworks/library/wa-webstandards/index.html">HTML5</a> is a new version of HTML and XHTML. The <a href="http://www.w3.org/TR/html5/">HTML5 draft</a> specification defines a single language that can be written in HTML and XML. It attempts to solve issues found in previous iterations of HTML and addresses the needs of <em>web applications</em>, an area previously not adequately covered by HTML. (<a href="http://html5.org/">source</a>).</p>
 	
 	<p>We will use the HTML5 Doctype and HTML5 features when appropriate.</p>
 	
@@ -168,7 +169,7 @@ meta:
 
 	<h3>Quoting Attributes</h3>
 	
-	<p>While the HTML5 specification defines quotes around attributes as optional for consistency with attributes that accept whitespace, all attributes should be quoted. </p> 
+	<p>The HTML5 specification defines quotes around attributes as optional. For consistency with attributes that accept whitespace, all attributes should be quoted. </p> 
 	
 	<textarea class="brush:html">
 		<p class="line note" data-attribute="106">This is my paragraph of special text.</p>
@@ -186,7 +187,7 @@ meta:
 		
 		<p>The second component of a web page is the presentation information contained in the Cascading Style Sheet (<abbr title="Cascading Style Sheets">CSS</abbr>.) Web browsers successful implementation of CSS has given a whole generation of web authors site-wide control over the look and feel of their web sites.</p>
 		
-		<p>Just as the information on a web page is semantically described in the <a href="#markup">HTML Markup</a>, CSS describes all presentation aspects of the page via a description of it's visual properties. CSS is powerful in that these properties are mixed and matched via identifiers to control the page's layout and visual characteristics through the layering of style rules (the "cascade").</p>
+		<p>Just as the information on a web page is semantically described in the <a href="#markup">HTML Markup</a>, CSS describes all presentation aspects of the page via a description of its visual properties. CSS is powerful in that these properties are mixed and matched via identifiers to control the page's layout and visual characteristics through the layering of style rules (the "cascade").</p>
 	</div>
 
 	<h3>General Coding Principles</h3>
@@ -208,7 +209,7 @@ meta:
 			</li>
 
 		<li>Don't include styles inline in the document, either in a style tag or on the elements. It's harder to track down style rules.</li>	
-		<li>Use a reset CSS file (like the one present in H5BP or the <a href="http://meyerweb.com/eric/tools/css/reset/">Eric Meyers reset</a>) to zero our cross-browser weirdness.</li>
+		<li>Use <a href="http://necolas.github.com/normalize.css/">normalize.css</a> to make rendering more consistent across browsers.</li>
 		<li>Use a font-normalization file like <a href="http://developer.yahoo.com/yui/fonts/">YUI fonts.css</a></li>	
 		<li>Elements that occur only once inside a document should use IDs, otherwise, use classes.</li>
 		<li>Understand <a href="http://www.stuffandnonsense.co.uk/archives/css_specificity_wars.html">cascading and selector specificity</a> so you can write very terse and effective code.</li>
@@ -233,6 +234,7 @@ meta:
 	
 	<p>At minimum, format CSS with selectors on one line and each property on its own line. The declarations are indented. </p>
 	<p>As an enhancement to that style, related or child styles and additional 2 or 4 spaces. That allows for hierarchical scanning and organization and makes (for some people) an easier-to-read style sheet.</p>
+	<p>Also, if you specify multiple selectors, it's a good idea to start each on new line. This prevents lines from growing long and improves readability as well as version control workflow.</p>
     <textarea class="brush:css">
     .post-list li a{
 		color:#A8A8A8;
@@ -241,7 +243,8 @@ meta:
         	color:#000;
         	text-decoration:none;
      	}
-     	.post-list li .author a, .post-list li .author a:hover{
+     	.post-list li .author a, 
+     	.post-list li .author a:hover{
         	 color:#F30;
        		 text-transform:uppercase;
      	}
@@ -290,7 +293,7 @@ meta:
 	
 	<p>IDs have a higher specificity than attribute selectors do, and class selectors have higher specificity than any number of element selectors. Always try to use IDs to increase the specificity. There are times when we may try to apply a CSS rule to an element and it does not work no matter what we try. This is likely because the specificity of the selector used is lower than another one and the properties of the higher one are taking precedence over those you want to apply. This is more common in working with larger more complex stylesheets. It isn't a big issue with smaller projects usually.</p>
 	
-	<h5>Calculating specifity</h5>
+	<h5>Calculating specificity</h5>
 	
 	<p>When working with a large and complex stylesheet it helps to know how to calculate the value of a selector's specificity, to save you time and to make your selectors more efficient.</p>
 	
@@ -390,6 +393,18 @@ meta:
 			</ul>
 		</li>
 	</ul>
+<h3>Color Management</h3>
+    <ul>
+        <li>Verify that all members on your team have consistent color management settings.</li>
+           <ul>
+               <li>Any given two monitors most likely display the colors differently, but sRGB color profile must be your default.</li>
+               <li>When you open files in Photoshop, pay attention to Color Profile warnings and notify team members when Photoshop is suggesting to convert an image to a different profile.</li> 
+			</ul>
+        <li>Never embed a color profile in your images.
+            <ul>
+				<li>When you Save for Web and Devices from Photoshop, be sure to uncheck &quot;Embed Color Profile.&quot;</li>
+			</ul> </li>
+    </ul>
 
 	<hr />
 	
@@ -699,6 +714,15 @@ meta:
 		<li><a href="http://developer.apple.com/fonts/TTRefMan/">Apple True Type Reference</a> </li>
 	</ul>
 
+	<h3>Use CSS3</h3>
+	
+	<p>You can do a lot of new things with the added features in the CSS3 spec, many of which are not yet fully supported by all the major browsers. That doesn't 
+	mean they can't be used today. For the things that aren't supported there are fallback libraries or other 'polyfills' which you can use to fill in the holes where
+	browsers may be lacking some support of a new feature.</p>
+	
+	<p>There are also browser specific properties or prefixes that can be used to style things too. We recommend using <a href="http://prefixr.com">Prefixr.com</a> to 
+	make sure you include all the different prefixed browser properties for the sake of cross-browser support.</p>
+	
 </section>
 <!-- #### JAVSCRIPT SECTION #### -->
 
@@ -710,6 +734,7 @@ meta:
 		<h1>JavaScript</h1>
 	
 		<p>JavaScript is the third major component of a web page. JavaScript code, when properly applied to a web page, enhances the overall user and browser-based experience through attaching to events and controlling the overall behavior layer.</p>
+
 		<p>JavaScript has seen an explosion in popularity in recent years as powerful new browser implementations have finally empowered the creation of full on browser-based web applications. Additionally, careful use of JavaScript allows for full manipulation and control over the other two components of web page authoring, <a href="#markup">HTML Markup</a> and <a href="#css">CSS</a>. Today the structure of pages and the visual styles of pages can be manipulated real time without full web page refreshes.</p>
 	</div>
 
@@ -721,7 +746,7 @@ meta:
 	
 	<ul>
 		<li>99% of code should be housed in external javascript files. They should be included at the END of the BODY tag for maximum page performance.</li>
-		<li>Don't rely on the user-agent string. Do proper feature detection. (More at <a href="http://diveintohtml5.org/detect.html">Dive Into HTML5: Detection</a> &amp; <a href="http://api.jquery.com/jQuery.support/">jQuery.support docs</a>)</li>
+		<li>Don't rely on the user-agent string. Do proper feature detection. (More at <a href="http://diveintohtml5.info/detect.html">Dive Into HTML5: Detection</a> &amp; <a href="http://api.jquery.com/jQuery.support/">jQuery.support docs</a>)</li>
 		<li>Don't use document.write().</li>
 		<li>All Boolean variables should start with "is".
 			<figure class="preCode">Test for positive conditions</figure>
@@ -1044,11 +1069,11 @@ meta:
 	a.expandbox:hover { background-position: -50px -20px; }
 	</textarea>
 	
-	<p>Using sprites reduces total page weight and reduces HTTP connections which speeds up page load. <a href="http://css-tricks.com/css-sprites/">More on the general technique and overview at css-tricks.com</a></p>
+	<p>Using sprites reduces total page weight and reduces HTTP connections which speeds up page load. <a href="http://css-tricks.com/css-sprites/">More on the general technique and overview at css-tricks.com</a>.  It is just an overall best practice to make use of CSS sprite images whenever you can.</p>
 	
-	<p>Many developers use a vertically-oriented sprite in addition to the primary sprite. This vertical sprite will be <=100px wide (and tall) and contain icons that are typically placed next to text, such as list item bullets. Yahoo <a href="http://l.yimg.com/a/i/ww/sp/pa-icons3.gif ">uses a few such as this one</a>.</p>
+	<p>Many developers use a vertically-oriented sprite in addition to the primary sprite. This vertical sprite will be <strong>less than or equal to 100px wide</strong> (and tall) and contain icons that are typically placed next to text, such as list item bullets or call to action links and buttons. Yahoo uses a few <a href="http://l.yimg.com/a/i/ww/sp/pa-icons3.gif">such as this one</a>.</p>
 	
-	<p>The one consideration is to not make sprites too large, something over 1000px in either direction will end up using a sizeable amount of memory. <a href="http://blog.vlad1.com/2009/06/22/to-sprite-or-not-to-sprite/">More detail about sprites and memory usage here</a>.</p>
+	<p>The one consideration is to not make sprites too large, something over 1000px in either direction will end up using a sizeable amount of memory. Read more on <a href="http://blog.vlad1.com/2009/06/22/to-sprite-or-not-to-sprite/">when to use sprites and memory usage here</a>, and for more general tips and techniques on creating sprites check out the <a href="http://blog.mozilla.com/webdev/2009/03/27/css-spriting-tips/">Mozilla Dev Blog</a>.</p>
 
 	<p>Some general <a href="http://blog.mozilla.com/webdev/2009/03/27/css-spriting-tips/">tips and techniques</a> in sprite creation can be found on the <a href="http://blog.mozilla.com/webdev/2009/03/27/css-spriting-tips/">Mozilla Dev Blog</a>.</p>
 
@@ -1250,17 +1275,20 @@ meta:
 	<p>Additionally, other less effective IE Testing options (not typically recommended) include <a href="http://www.my-debugbar.com/wiki/IETester/HomePage">IETester</a>, which is still better than <a href="http://tredosoft.com/Multiple_IE">Multiple_IE</a> and <a href="http://tredosoft.com/IE7_standalone">IE7 standalone</a>.</p>
 	
 	<h5>Firefox</h5>
+	
 	<ul>
 		<li><a href="http://www.mozilla.com/en-US/firefox/all-older.html">Firefox 3.6+</a> should be installed natively as well - with version 3.0 available through a <a href="http://portableapps.com/">portable apps</a> version. </li>
 		<li>If you're up to it, <a href="https://wiki.molecular.com/wiki/Install_Firefox_3">Install Firefox 3, 3.5, and/or 3.6 side-by-side with FF4</a>. The Firefox Profile Manager allows you to install to different directories and <a href="http://lifehacker.com/5481213/master-multiple-firefox-profiles-for-more-productive-browsing">maintain different profiles for each</a>.</li>
 	</ul>
 
 	<h5>Safari for the PC</h5>
+
 	<ul>
 		<li>Use <a href="http://www.apple.com/safari/">the newest release of Safari for the PC</a>. It is 98% consistent with Safari on OS X, but not completely, so test there if its a required platform.</li>
 	</ul>
 
 	<h5>Opera</h5>
+
 	<ul>
 		<li>You can download <a href="http://arc.opera.com/pub/opera/win/">old versions from their archive</a>. Install in different folders to run multiple versions</li>
 	</ul>
@@ -1465,7 +1493,6 @@ meta:
 	<p>During the code review, a practice lead and/or interface developer should facilitate the meeting, while the practice lead or project manager takes notes and assigns action items. Reviewers should have reviewed the code and come prepared to ask questions or provide feedback.</p>
 	
 	<p>Notes and action items (including owners) should be distributed to all attendees after the code review. If substantial changes come out of a code review, or all code is not reviewed, it may be necessary to schedule a second code review. However, this should be discussed amongst the project team to determine feasibility.</p>
-
 
 </section>
 <!-- #### APPENDICES + RESOURCES SECTION #### -->
@@ -1703,6 +1730,7 @@ meta:
 		<li><a href="http://lesliefranke.com/files/reference/csscheatsheet.html">CSS Cheatsheet</a></li>
 		<li><a href="http://www.dezwozhere.com/links.html">CSS Links</a></li>
 		<li><a href="http://www.cleancss.com/">Clean CSS</a></li>
+		<li><a href="http://csswizardry.com/fluid-grids/">Fluid Grids Code Generator</a></li>
 	</ul>
 
 
