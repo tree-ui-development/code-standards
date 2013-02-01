@@ -6,18 +6,15 @@ meta:
     keywords: LendingTree code standards, coding standards, frontend development, frontend best practices, html code standards, html5 code standards, css code standards, best code practices, development, frontend development
 ---
 
-<!-- #### GENERAL SECTION #### -->
-
-<h1>Front-end Code Standards &amp; Best Practices</h1>
-
-<h2>Overview</h2>
-
-<p>This document contains guidelines for web applications built by the Creative Technology (front end engineering) practice of LendingTree. It is to be readily available to anyone who wishes to check the iterative progress of our best practices.</p>
-
-<p>This document's primary motivation is two- fold: <tt>1)</tt> code consistency and <tt>2)</tt> best practices. By maintaining consistency in coding styles and conventions, we can ease the burden of legacy code maintenance, and mitigate risk of breakage in the future. By adhering to best practices, we ensure optimized page loading, performance and maintainable code.</p>
-
-
-<section id="general">
+            <!-- #### GENERAL SECTION #### -->
+            <h1>
+                Front-end Code Standards &amp; Best Practices</h1>
+            <h2>Overview</h2>
+            <p>
+                This document contains guidelines for web applications built by the Creative Technology (front end engineering) practice of LendingTree. It is to be readily available to anyone who wishes to check the iterative progress of our best practices.</p>
+            <p>
+                This document's primary motivation is two- fold: <tt>1)</tt> code consistency and <tt>2)</tt> best practices. By maintaining consistency in coding styles and conventions, we can ease the burden of legacy code maintenance, and mitigate risk of breakage in the future. By adhering to best practices, we ensure optimized page loading, performance and maintainable code.</p>
+            <section id="general">
 
     <div class="intro has-icon">
         <img class="icon" src="img/layout/icon-curly.png" alt="{}" />
@@ -47,9 +44,8 @@ meta:
     <p>We will use server-side or build processes to automatically minify and gzip all static client-side files, such as CSS and JavaScript.</p>
 
 </section>
-<!-- #### MARKUP SECTION #### -->
-
-<section id="markup">
+            <!-- #### MARKUP SECTION #### -->
+            <section id="markup">
 
     <div class="intro has-icon">
         <img class="icon" src="img/layout/icon-curly.png" alt="{}" />
@@ -176,10 +172,8 @@ meta:
     </textarea>
     
 </section>
-<!-- #### CSS SECTION #### -->
-
-
-<section id="css">
+            <!-- #### CSS SECTION #### -->
+            <section id="css">
 
     <div class="intro has-icon">
         <img class="icon" src="img/layout/icon-curly.png" alt="{}" />
@@ -252,7 +246,18 @@ meta:
     <p>For multiple author environments, single line CSS should be avoided because it can cause issues with version control. </p>
     <h4>Alphabetize</h4>
     <p>If you're performance obsessed <a href="http://www.barryvan.com.au/2009/08/css-minifier-and-alphabetiser/">alphabetizing CSS properties increases the odds of larger repeatable patterns being present to aid in GZIP compression</a>. </p> 
-<h3>Classes vs. IDs</h3>
+
+    
+    <h3>Bootstrap Framework</h3>
+    <p><a href="http://twitter.github.com/bootstrap/">Bootstrap</a> works by providing a clean and uniform solution to the most common, everyday interface tasks developers come across. Bootstrap has quickly become one of our many go-to front-end tools when starting new applications and sites. This is because while it is very extensive, it’s flexible enough to work for many unique design needs.</p>
+    <p>You should strive to reuse as much of the bootstrap framework when when choosing class names. However here are some key examples when they should always be used:</p>
+    <ul>
+        <li><a href="http://twitter.github.com/bootstrap/base-css.html#buttons">Buttons</a></li>
+        <li><a href="http://twitter.github.com/bootstrap/base-css.html#forms">Forms</a></li>
+        <li><a href="http://twitter.github.com/bootstrap/components.html#alerts">Alerts and Messaging</a></li>
+        <li><a href="http://twitter.github.com/bootstrap/components.html#misc">Clearfix and Floats</a></li>
+    </ul>
+    <h3>Classes vs. IDs</h3>
     
     <p>You should only give elements an ID attribute if they are unique. They should be applied to that element only and nothing else. Classes can be applied to multiple elements that share the same style properties. Things that should look and work in the same way can have the same class name.</p>
     
@@ -263,7 +268,7 @@ meta:
             <li class="item">Category 3</li>
         </ul>
     </textarea>
-    
+
     <h3>Naming Conventions for Selectors</h3>
     
     <p>It is always preferable to name something, be it an ID or a class, by the nature of <strong>what it is</strong> rather than by <strong>what it looks like</strong>. For instance, a class name of <code>bigBlueText</code> for a special note on a page is quite meaningless if it has been changed to have a small red text color. Using a more intelligent convention such as <code>noteText</code> is better because when the  visual style changes it still makes sense.</p>
@@ -347,11 +352,11 @@ meta:
     
     <figure class="preCode">Fixing IE</figure>
     <textarea class="brush:html">
-        <!--[if lt IE 7 ]> <body class="ie6"> <![endif]-->
-        <!--[if IE 7 ]>    <body class="ie7"> <![endif]-->
-        <!--[if IE 8 ]>    <body class="ie8"> <![endif]-->
-        <!--[if IE 9 ]>    <body class="ie9"> <![endif]-->
-        <!--[if !IE]><!--> <body> <!--<![endif]-->
+        <!--[if lt IE 7 ]>           <body class="ie ie6 lte9 lte8 lte7 no-js"> <![endif]--> 
+        <!--[if IE 7 ]>              <body class="ie ie7 lte9 lte8 lte7 no-js"> <![endif]--> 
+        <!--[if IE 8 ]>              <body class="ie ie8 lte9 lte8 no-js"> <![endif]--> 
+        <!--[if IE 9 ]>              <body class="ie ie9 lte9 no-js"> <![endif]--> 
+        <!--[if (gt IE 9)|!(IE)]><!--><body><!--<![endif]-->
     </textarea>
     
     <textarea class="brush:css">
@@ -362,13 +367,14 @@ meta:
     <p>If you're using HTML5 (and the <a href="#h5bp">HTML5 Boilerplate</a>) we encourage the use of the <a href="http://www.modernizr.com/">Modernizer</a> JavaScript library and this pattern:</p>
      
     <textarea class="brush:html">
-        <!--[if lt IE 7]> <html class="no-js ie ie6" lang="en"> <![endif]-->
-        <!--[if IE 7]>    <html class="no-js ie ie7" lang="en"> <![endif]-->
-        <!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->
-        <!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
+        <!--[if lt IE 7]> <html class="no-js ie ie6 lte9 lte8 lte7" lang="en"> <![endif]-->
+        <!--[if IE 7]>    <html class="no-js ie ie7 lte9 lte8 lte7" lang="en"> <![endif]-->
+        <!--[if IE 8]>    <html class="no-js ie ie8 lte9 lte8" lang="en"> <![endif]-->
+        <!--[if IE 9]>    <html class="no-js ie ie9 lte9" lang="en"> <![endif]-->
         <!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
     </textarea>
-<h3>Shorthand</h3>
+
+    <h3>Shorthand</h3>
     
     <p>In general, CSS shorthand is preferred because of its terseness, and the ability to later go back and add in values that are already present, such as the case with margin and padding. Developers should be aware of the <abbr title="Top Right Bottom Left">TRBL</abbr> acronym, denoting the order in which the sides of an element are defined, in a clock-wise manner: Top, Right, Bottom, Left. If <em>bottom</em> is undefined, it inherits its value from <em>top</em>. Likewise, if <em>left</em> is undefined, it inherits its value from <em>right</em>. If only the <em>top</em> value is defined, all sides inherit from that one declaration.</p>
     
@@ -550,10 +556,10 @@ meta:
     
     <textarea class="brush:javascript">
         <script type="text/javascript">
-            WebFontConfig = { google: { families: [ 'Tangerine', 'Cantarell' ]} };
-            (function() {
+            WebFontConfig = { google: { families: ['Tangerine', 'Cantarell']} };
+            (function () {
                 var wf = document.createElement('script');
-                wf.src = ('https:' == document.location.protocol ? 'https' : 'http') + 
+                wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
                           '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
                 wf.type = 'text/javascript';
                 wf.async = 'true';
@@ -569,8 +575,8 @@ meta:
         <script type="text/javascript" src="https://www.google.com/jsapi"></script>
         <script type="text/javascript">
             google.load("webfont", "1");
-            google.setOnLoadCallback(function() {
-                WebFont.load({ google: { families: [ 'Tangerine', 'Cantarell' ]} });
+            google.setOnLoadCallback(function () {
+                WebFont.load({ google: { families: ['Tangerine', 'Cantarell']} });
             });
         </script>
     </textarea>
@@ -724,9 +730,8 @@ meta:
     make sure you include all the different prefixed browser properties for the sake of cross-browser support.</p>
     
 </section>
-<!-- #### JAVSCRIPT SECTION #### -->
-
-<section id="js">
+            <!-- #### JAVSCRIPT SECTION #### -->
+            <section id="js">
 
     <div class="intro has-icon">
         <img class="icon" src="img/layout/icon-curly.png" alt="{}" />
@@ -740,8 +745,33 @@ meta:
 
     <h2>JavaScript Libraries</h2>
 
-        <p class="normalize">We primarily develop new applications in <a href="http://api.jquery.com/">jQuery</a>, though we have expertise in plain JavaScript as well as all major modern javascript libraries.</p>
-    
+    <p class="normalize">We primarily develop new applications in <a href="http://api.jquery.com/">jQuery</a>, though we have expertise in plain JavaScript as well as all major modern javascript libraries.</p>
+    <h3>Frameworks</h3>
+    <dl>
+        <dt>Angular</dt>
+        <dd>AngularJS is a toolset for building the framework most suited to your application development. It is fully extensible and works well with other libraries. Every feature can be modified or replaced to suit your unique development workflow and feature needs.</dd>
+        <dt>Bootstrap</dt>
+        <dd>Bootstrap was made to not only look and behave great in the latest desktop browsers (as well as IE7!), but in tablet and smartphone browsers via responsive CSS as well.</dd>
+        <dt>Jquery UI</dt>
+        <dd>jQuery UI is a curated set of user interface interactions, 	effects, widgets, and themes built on top of the jQuery JavaScript Library. Whether you're building highly interactive web applications or you just need to add a date picker to a form control, jQuery UI is the perfect choice.</dd>
+    </dl>
+    <h3>Plugins</h3>
+    <dl>
+        <dt>Jquery.Validate</dt>
+        <dd>This jQuery plugin makes simple clientside form validation trivial, while offering lots of option for customization. <a href="http://bassistance.de/jquery-plugins/jquery-plugin-validation/">Website</a></dd>
+
+        <dt>Jquery.MaskedInput</dt>
+        <dd>This is a masked input plugin for the jQuery javascript library. It allows a user to more easily enter fixed width input where you would like them to enter the data in a certain format (dates,phone numbers, etc). <a href="http://digitalbush.com/projects/masked-input-plugin/">Website</a></dd>
+
+        <dt>Modernizr</dt>
+        <dd>Modernizr is a JavaScript library that detects HTML5 and CSS3 features in the user’s browser. <a href="http://www.modernizr.com">Website</a></dd>
+
+        <dt>JSON3</dt>
+        <dd>JSON 3 is a modern JSON implementation compatible with a variety of JavaScript platforms, including Internet Explorer 6, Opera 7, Safari 2, and Netscape 6. <a href="http://bestiejs.github.com/json3">Website</a></dd>
+
+        <dt>Jquery.Cookie</dt>
+        <dd>A simple, lightweight jQuery plugin for reading, writing and deleting cookies. <a href="https://github.com/carhartl/jquery-cookie#readme">Website</a></dd>
+    </dl>
     <h2>General Coding Principles</h2>
     
     <ul>
@@ -1535,83 +1565,6 @@ meta:
     </ul>
     
     
-    <h3>Code Editors</h3>
-    
-    <p>A great code editor can spark productivity in exceptional ways. Many developers prefer rudimentary text editors, others prefer powerful integraded development environments (IDEs). What follows is a general listing of some of the more well-known tools, it would be impossible to list them all.</p>
-    
-    <dl>
-        <dt>Aptana</dt>
-        <dd>
-            Aptana Studio is a powerful, free and open source Ajax development environment which runs stand-alone or within Eclipse. Aptana Studio offers tooling for Ajax including HTML, CSS, DOM, and JavaScript editing and debugging, plus support via additional free plugins for PHP, Ruby on Rails, Adobe AIR, Apple iPhone development. It also features full SVN repository integration for committing, branching, tagging, merging and repository browsing. <a href="http://aptana.com/">Aptana</a>. [Linux, Mac, Windows]
-        </dd>
-        
-        <dt>Geany</dt>
-        <dd>
-            Geany is a text editor using the GTK2 toolkit with basic features of an integrated development environment. It was developed to provide a small and fast IDE, which has only a few dependencies from other packages. It supports many filetypes and has some nice features. <a href="http://www.geany.org/">Geany</a>. [Linux, Mac, Windows]
-        </dd>
-        
-        <dt>Notepad ++</dt>
-        <dd>
-            Notepad++ is a free (free as in "free speech", but also as in "free beer") source code editor and Notepad replacement, which supports several programming languages, running under the MS Windows environment. <a href="http://notepad-plus.sourceforge.net/uk/about.php">Notepad ++</a>. [Windows]
-        </dd>
-        
-        <dt>e TextEditor</dt>
-        <dd>
-            E is a new text editor for Windows, with powerful editing features and quite a few unique abilities. It makes manipulating text fast and easy, and lets you focus on your writing by automating all the manual work. You can extend it in any language, and by supporting TextMate bundles, it allows you to tap into a huge and active community. <a href="http://www.e-texteditor.com/">e TextEditor</a>. [Windows]
-        </dd>
-
-        <dt>Edit Plus</dt>
-        <dd>
-            EditPlus is a text editor, HTML editor and programmers editor for Windows. While it can serve as a good Notepad replacement, it also offers many powerful features for Web page authors and programmers. <a href="http://www.editplus.com/">EditPlus</a>. [Windows]
-        </dd>
-
-        <dt>Homesite</dt>
-        <dd>
-            HomeSite 5.5 provides a lean, code-only editor for web development. Advanced coding features enable you to instantly create and modify HTML, CFML, JSP, and XHTML tags, while enhanced productivity tools allow you to validate, reuse, navigate, and format code more easily. Configure Adobe (formerly Macromedia) HomeSite to fit your needs by extending its functionality and customizing the interface. <a href="http://www.adobe.com/products/homesite/">Homesite</a>. [Windows]
-        </dd>
-        
-        <dt>TextMate</dt>
-        <dd>
-            TextMate claims to be the "Missing Editor" for Mac OS X. A general purpose editor with a sparse interface, the real power is in it's extensibility. Features column selections, recordable macros, snippets, auto-pairing of brackets and other characters, clipboard history, code folding, tab-triggers, tabbed placeholders and mirror typing. And that's just for starters. Anything that can be done via scripts through the Mac command line can be done through custom commands, allowing an extremely high degree of customization and expansion of the feature set. TextMate's "bundle" format has been adapted by many other code editors including the aforementioned e TextEditor. <a href="http://www.macromates.com">TextMate</a>. [Mac]
-        </dd>
-        
-        <dt>Espresso</dt>
-        <dd>
-            Espresso was created by the same fellow that created the innovative CSSEdit CSS editor. Espresso features syntax highlighting, code folding, code completion, document outliner/navigators, projects, powerful find features, and built-in file transfer publishing capabilities. Finally, it has a powerful "Sugar" feature set which allows the creation of custom commands and plugins. <a href="http://macrabbit.com/espresso/">Espresso</a>. [Mac]
-        </dd>
-        
-        <dt>BBEdit</dt>
-        <dd>
-            BBEdit is the grand-daddy of Mac code editors for web development. Features syntax highlighting, exceptionally powerful text manipulation tools, multi-file searches, a scriptable API, text clippings, and extensive Mac Automator features. <a href="http://www.barebones.com/products/bbedit/">BBEdit</a>. [Mac]
-        </dd>
-        
-        <dt>TextWrangler</dt>
-        <dd>
-            The free "little brother" of BBEdit, it is a powerful raw text editor with a massive text manipulation feature set. Searches, regular expressions, text transformations, syntax highlighting and code navigation tools for a variety of different language environments. <a href="http://www.barebones.com/products/textwrangler/">TextWrangler</a>. [Mac]
-        </dd>
-        
-        <dt>Coda</dt>
-        <dd>
-            Coda from Panic software is a powerful IDE with code editing, terminal, remote file management, and help documentation all built into one UI. Aiming to be a one stop shop for your web development workflow, it also features SVN integration and a new plug-in builder with powerful scripting support and TextMate bundle importing. Finally, code clips and live multi-user editing are also supported. <a href="http://www.panic.com/coda/">Coda</a>. [Mac]
-        </dd>
-        
-        <dt>UltraEdit</dt>
-        <dd>
-            Another editor that's been around for ages, this is an immensely robust and powerful text editor, able to open files limited only by the amount of memory on your computer. The feature list is virtually too much to list, with a massive list of text manipulation features, project support, powerful search and replace, hex editing, function lists, a massive list of languages supported (600+) remote file ftp, telnet, ssh, file comparison, scriptable macros, tools and compiler support, and much, much more.  <a href="http://www.ultraedit.com/products/ultraedit/">UltraEdit</a>. [Linux, Mac, Windows]
-        </dd>
-        
-        <dt>Sublime Text</dt>
-        <dd>
-            A relatively new editor, Sublime Text is a new approach in editors. "Open Anything" searches through file names and file contents, with remarkable efficiency. Incredibly powerful selection controls allow editing text in multiple locations at once and the "Minimap" gives you a bird's eye view of the open file so you can find your place easily. Actively being developed, new features are being added and the community around the editor is rapidly expanding. Macros, auto-complete, snippets, build tools, the list of features goes on and on. Supports Linux and Mac starting with version 2.
-<a href="http://www.sublimetext.com/">Sublime Text</a>. [Linux, Mac, Windows]
-        </dd>
-        
-        <dt>Vim</dt>
-        <dd>
-            If you have to ask, it's probably not for you. <a href="http://www.vim.org/">Vim</a> [Linux, Mac, Windows]
-        </dd>
-    </dl>
-    
     <h3>Google Chrome Extensions</h3>
     
     <dl>
@@ -1675,9 +1628,6 @@ meta:
             CSS Coverage is an extension for Firebug which allows you to scan multiple pages of your site to see which CSS rules are actually used in your site. <a href="https://addons.mozilla.org/en-us/firefox/addon/css-usage/">CSS Usage</a>.
         </dd>
         
-        <dt>Greasemonkey</dt>
-        <dd>Allows you to customize the way a web page displays using small bits of JavaScript. <a href="https://addons.mozilla.org/en-US/firefox/addon/748">GreaseMonkey</a>.</dd>
-
         <dt>Web Developer Toolbar</dt>
         <dd>Adds a menu and a toolbar with various web developer tools. <a href="https://addons.mozilla.org/en-US/firefox/addon/60">Web Developer Toolbar</a>.</dd>
 
