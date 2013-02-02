@@ -624,7 +624,7 @@ dd{
 	border-top: 10px solid #68A015;
 	font-family: 'Calibri','AlexandriaBold';
 	font-size: 30px;
-	padding: 15px 0 6px 20px;
+	padding: 8px 0 6px 20px;
 	position: fixed;
 	top:30px;
 	width: 300px;
@@ -636,7 +636,7 @@ dd{
     margin: 0;
     padding: 0;
     position: fixed;
-    top: 125px;
+    top: 112px;
 	width: 300px;
 }
 
